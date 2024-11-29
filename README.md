@@ -3,7 +3,15 @@ Este projeto visa automatizar a exclusão de emails de uma caixa de entrada de u
 
 ## Funcionalidades
 1. Conexão com o servidor IMAP: Conecta-se a um servidor de email utilizando IMAP para acessar a caixa de entrada.
-2. Exclusão de emails: Permite excluir emails de forma seletiva ou em massa com base em critérios definidos (por exemplo, idade do email, remetente, assunto) só é necessario ajustar na linha 29.
+2. Exclusão de emails: Permite excluir emails de forma seletiva ou em massa com base em critérios definidos (por exemplo, idade do email, remetente, assunto) só é necessario ajustar na linha 18. Alguns possiveis filtros:
+* ALL: Todas as mensagens serão apagadas
+* UNSEEN: Somente as mensagens não visualizadas
+* SEEN: Somente as mensagens visualizadas
+* FROM: Emails enviados por um remetente específico:
+* SUBJECT: Por assunto específico  
+
+Todos os parâmetros se encontra na documentação da lib: https://docs.python.org/3/library/imaplib.html
+
 3. Segurança: Utiliza autenticação segura (SSL/TLS) para garantir a privacidade e segurança da conexão.
 4. Interface simples: O script pode ser configurado para excluir emails automaticamente sem a necessidade de interação manual.
 
